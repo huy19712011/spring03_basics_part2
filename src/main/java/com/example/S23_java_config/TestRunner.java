@@ -25,8 +25,13 @@ public class TestRunner {
 //        dao.create();
 
         Service service = context.getBean(Service.class);
+        Service service2 = context.getBean(Service.class);
         service.save();
 
+        System.out.println(service.hashCode());
+        System.out.println(service2.hashCode());
+
+        // properly shutdown
         context.close();
 
     }

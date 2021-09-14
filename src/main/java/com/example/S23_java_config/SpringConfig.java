@@ -8,6 +8,7 @@ package com.example.S23_java_config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Scope;
 
 /**
  *
@@ -19,6 +20,8 @@ public class SpringConfig {
 
     //@Bean
     @Bean(initMethod = "init123", destroyMethod = "destroy123")
+    @Scope("prototype")
+    //@Scope
     public Service service() {
         return new Service();
     }
