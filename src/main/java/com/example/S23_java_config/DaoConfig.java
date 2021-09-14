@@ -7,19 +7,17 @@ package com.example.S23_java_config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
 /**
  *
  * @author huynq
  */
 @Configuration
-@Import(Dao.class)
-public class SpringConfig {
+public class DaoConfig {
 
     @Bean
-    public Service service() {
-        return new Service();
+    public Dao dao() {
+        return new Dao();
     }
 
 }
