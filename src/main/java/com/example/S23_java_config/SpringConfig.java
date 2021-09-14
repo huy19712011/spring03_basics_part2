@@ -17,7 +17,8 @@ import org.springframework.context.annotation.Import;
 @Import(Dao.class)
 public class SpringConfig {
 
-    @Bean
+    //@Bean
+    @Bean(initMethod = "init123", destroyMethod = "destroy123")
     public Service service() {
         return new Service();
     }

@@ -27,6 +27,8 @@ public class TestRunner {
         Service service = context.getBean(Service.class);
         service.save();
 
+        context.close();
+
     }
 
 }

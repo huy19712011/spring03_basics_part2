@@ -16,6 +16,14 @@ public class Service {
     @Autowired
     Dao dao;
 
+    public void init123() {
+        System.out.println("init123()");
+    }
+
+    public void destroy123() {
+        System.out.println("destroy()");
+    }
+
 
     public void save() {
 
