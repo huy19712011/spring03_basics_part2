@@ -21,10 +21,11 @@ public class TestRunner {
 
         AnnotationConfigApplicationContext context
                 = new AnnotationConfigApplicationContext(SpringConfig.class); // can have many classes
+//        Dao dao = context.getBean(Dao.class);
+//        dao.create();
 
-        Dao dao = context.getBean(Dao.class);
-        dao.create();
-
+        Service service = context.getBean(Service.class);
+        service.save();
 
     }
 
